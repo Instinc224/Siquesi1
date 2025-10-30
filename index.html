@@ -18,7 +18,6 @@
       color: #f5f5f5;
     }
 
-    /* ====== PORTADA ====== */
     .portada {
       height: 100vh;
       display: flex;
@@ -74,7 +73,6 @@
       box-shadow: 0 0 20px rgba(255, 50, 50, 0.7);
     }
 
-    /* ====== SECCIONES ====== */
     section {
       max-width: 900px;
       margin: 80px auto;
@@ -110,7 +108,6 @@
       line-height: 1.6;
     }
 
-    /* ====== IMÁGENES ====== */
     .imagenes {
       display: flex;
       flex-wrap: wrap;
@@ -131,7 +128,6 @@
       box-shadow: 0 6px 20px rgba(255,0,0,0.6);
     }
 
-    /* ====== BOTÓN VOLVER ====== */
     .volver {
       display: block;
       width: fit-content;
@@ -152,7 +148,6 @@
       box-shadow: 0 0 20px rgba(255, 50, 50, 0.7);
     }
 
-    /* ====== PIE DE PÁGINA ====== */
     footer {
       background-color: #111;
       color: #888;
@@ -167,12 +162,10 @@
         width: 100%;
       }
     }
-
   </style>
 </head>
 <body>
 
-  <!-- ====== PANTALLA INICIAL ====== -->
   <div class="portada" id="inicio">
     <h1>Tecnologías de Fabricación Digital</h1>
     <p>Por Marco Antonio</p>
@@ -187,16 +180,44 @@
   <!-- ====== IMPRESIÓN 3D ====== -->
   <section id="impresion3d">
     <h2>🧱 Impresión 3D</h2>
-    <p>La impresión 3D es una tecnología de fabricación aditiva, lo que significa que crea objetos capa por capa a partir de un modelo digital.
-    Se utiliza una impresora 3D que deposita material —generalmente plástico, resina o metal— hasta formar la pieza completa.</p>
+    <p>La impresión 3D es una tecnología de fabricación aditiva, lo que significa que crea objetos capa por capa a partir de un modelo digital. Se utiliza una impresora 3D que deposita material —generalmente plástico, resina o metal— hasta formar la pieza completa.</p>
+
+    <h3>Aplicaciones:</h3>
+    <ul>
+      <li>Prototipado rápido de piezas y productos.</li>
+      <li>Creación de piezas personalizadas (como prótesis o herramientas).</li>
+      <li>Fabricación en arquitectura, diseño y arte.</li>
+    </ul>
+
+    <h3>Ventajas:</h3>
+    <ul>
+      <li>Bajo costo de producción para prototipos.</li>
+      <li>Personalización total del diseño.</li>
+      <li>Reducción de desperdicio de material.</li>
+    </ul>
+
+    <h3>Materiales comunes:</h3>
+    <ul>
+      <li>PLA (ácido poliláctico)</li>
+      <li>ABS (acrilonitrilo butadieno estireno)</li>
+      <li>PETG, resinas, y filamentos flexibles.</li>
+    </ul>
 
     <h3>Trabajo realizado:</h3>
-    <p>Realicé un trabajo sobre una impresión 3D en Tinkercad, creando un cubo con una bolita dentro para que se mueva libremente después de quitar los soportes. El archivo descargado es <b>.stl</b>, compatible con impresoras 3D.</p>
+    <p>El proyecto de impresión 3D se desarrolló utilizando la plataforma Tinkercad. El objetivo consistió en diseñar un cubo con una esfera interna libre, de manera que, tras el proceso de impresión y la posterior eliminación de los soportes, la esfera pudiera moverse libremente dentro del cubo.</p>
 
-    <!-- Imágenes Impresión 3D -->
     <div class="imagenes">
-      <img src="imagen1_3d.jpg" alt="Modelo 3D cubo con bolita">
-      <img src="imagen2_3d.jpg" alt="Modelo 3D cubo con bolita impreso">
+      <img src="imagen1.jpg" alt="Cubo 3D">
+    </div>
+
+    <p>El modelo fue exportado en formato .stl, el cual es compatible con la mayoría de las impresoras 3D. Este formato garantiza una correcta lectura de las geometrías tridimensionales y permite una impresión precisa del diseño elaborado.</p>
+
+    <div class="imagenes">
+      <img src="imagen2.jpg" alt="Modelo elaborado STL">
+    </div>
+
+    <div class="imagenes">
+      <img src="imagen3.jpg" alt="Resultado impresión 3D">
     </div>
 
     <a class="volver" href="#inicio">⬆️ Regresar al inicio</a>
@@ -207,30 +228,83 @@
     <h2>🔦 Corte Láser</h2>
     <p>El corte láser utiliza un rayo láser concentrado para cortar o grabar materiales con gran precisión. Se controla mediante un archivo digital (vector o CAD) que guía el movimiento del láser sobre el material.</p>
 
-    <h3>Trabajo realizado:</h3>
-    <p>Se diseñaron en Tinkercad las piezas necesarias para crear un cubo armable con 6 caras, modeladas con medidas exactas para lograr un buen encaje. Luego se exportó el archivo en formato <b>.dxf</b>, compatible con la cortadora láser. Es importante usar madera del mismo grosor que el diseño. Una vez cortadas las piezas, se ensamblaron y se verificó que encajaran perfectamente.</p>
+    <h3>Aplicaciones:</h3>
+    <ul>
+      <li>Fabricación de maquetas y prototipos.</li>
+      <li>Grabado en madera, acrílico, cuero o metal.</li>
+      <li>Producción de piezas decorativas o industriales.</li>
+    </ul>
 
-    <!-- Imágenes Corte Láser -->
+    <h3>Ventajas:</h3>
+    <ul>
+      <li>Alta precisión y acabado limpio.</li>
+      <li>Capacidad para cortar formas muy complejas.</li>
+      <li>Rapidez y bajo mantenimiento.</li>
+    </ul>
+
+    <h3>Materiales comunes:</h3>
+    <ul>
+      <li>MDF, acrílico, papel, cuero, metal delgado y cartón.</li>
+    </ul>
+
+    <h3>Trabajo realizado:</h3>
+    <p>Para la práctica de corte láser, se diseñaron en Tinkercad las piezas necesarias para construir un cubo ensamblable compuesto por seis caras. Cada pieza fue modelada con medidas exactas para asegurar un correcto ajuste entre los elementos.</p>
+
     <div class="imagenes">
-      <img src="imagen1_laser.jpg" alt="Diseño de corte láser cubo">
-      <img src="imagen2_laser.jpg" alt="Cubo ensamblado después del corte láser">
+      <img src="imagen4.jpg" alt="Piezas Tinkercad Corte Láser">
+    </div>
+
+    <p>Posteriormente, el diseño se exportó en formato .dxf, adecuado para su uso en cortadoras láser. Es importante considerar que el material seleccionado debe tener el mismo grosor definido en el diseño digital, con el fin de garantizar cortes precisos y un ensamblaje adecuado.</p>
+
+    <p>Una vez finalizado el proceso de corte, se verificó que las piezas embonaran correctamente, completando así la estructura final del cubo.</p>
+
+    <div class="imagenes">
+      <img src="imagen5.jpg" alt="Cubo ensamblado final corte láser">
     </div>
 
     <a class="volver" href="#inicio">⬆️ Regresar al inicio</a>
   </section>
 
-  <!-- ====== CIRCUITO PCB ====== -->
+  <!-- ====== PCB ====== -->
   <section id="pcb">
     <h2>💡 Circuito PCB (Placa de Circuito Impreso)</h2>
-    <p>Un PCB (Printed Circuit Board) sirve de base para montar y conectar los componentes electrónicos de un circuito. Las pistas de cobre conducen la electricidad entre los componentes.</p>
+    <p>Un PCB (Printed Circuit Board) es una placa que sirve de base para montar y conectar los componentes electrónicos de un circuito. En lugar de usar cables, las pistas de cobre conducen la electricidad entre los componentes.</p>
+
+    <h3>Aplicaciones:</h3>
+    <ul>
+      <li>En todos los dispositivos electrónicos: teléfonos, computadoras, robots, etc.</li>
+      <li>En prototipos y productos electrónicos finales.</li>
+    </ul>
+
+    <h3>Ventajas:</h3>
+    <ul>
+      <li>Reduce el tamaño y el peso de los circuitos.</li>
+      <li>Aumenta la confiabilidad y organización.</li>
+      <li>Facilita la reparación y el mantenimiento.</li>
+    </ul>
+
+    <h3>Proceso de fabricación:</h3>
+    <ol>
+      <li>Diseño del circuito en software (como KiCad o EasyEDA).</li>
+      <li>Impresión o grabado de las pistas.</li>
+      <li>Perforado y soldado de componentes.</li>
+      <li>Pruebas y ensamblado final.</li>
+    </ol>
 
     <h3>Trabajo realizado:</h3>
-    <p>Se utilizó EasyEDA para crear el diagrama del circuito con N555, resistencias, potenciómetros, bornera, capacitor, LED y transistor. Las pistas se diseñaron con grosor de 0.5 mm y luego se exportó el archivo <b>Gerber</b> para imprimir en cobre y soldar los componentes.</p>
+    <p>Para el desarrollo del circuito impreso (PCB), se empleó la herramienta en línea EasyEDA, que permitió elaborar el diagrama esquemático del circuito. En el diseño se incorporaron diversos componentes electrónicos, entre ellos: temporizador N555, resistencias, potenciómetros, bornera de alimentación, capacitor, LED y transistor.</p>
 
-    <!-- Imágenes PCB -->
+    <p>Una vez completado el esquema, se procedió al diseño de las pistas conductoras, definiendo un grosor de 0.5 mm para garantizar una adecuada conducción eléctrica.</p>
+
     <div class="imagenes">
-      <img src="imagen1_pcb.jpg" alt="Diseño de circuito PCB">
-      <img src="imagen2_pcb.jpg" alt="Circuito PCB finalizado">
+      <img src="imagen6.jpg" alt="Diseño de pistas PCB">
+    </div>
+
+    <p>Finalmente, el diseño se exportó en formato Gerber, estándar en la industria para la fabricación de PCBs, con el propósito de realizar la impresión sobre una placa de cobre y proceder al montaje y soldadura de los componentes correspondientes.</p>
+
+    <div class="imagenes">
+      <img src="imagen7.jpg" alt="Montaje de componentes PCB">
+      <img src="imagen8.jpg" alt="Circuito PCB terminado">
     </div>
 
     <a class="volver" href="#inicio">⬆️ Regresar al inicio</a>
@@ -239,6 +313,5 @@
   <footer>
     <p>© 2025 Marco Antonio - Tecnologías de Fabricación Digital</p>
   </footer>
-
 </body>
 </html>
