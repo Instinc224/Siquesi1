@@ -6,7 +6,6 @@
   <title>Tecnologías de Fabricación Digital</title>
 
   <style>
-    /* ====== ESTILOS GENERALES ====== */
     * {
       margin: 0;
       padding: 0;
@@ -16,63 +15,75 @@
 
     body {
       font-family: "Poppins", sans-serif;
-      background: linear-gradient(to bottom right, #eef2f3, #cfd9df);
-      color: #333;
+      color: #f5f5f5;
+      background: linear-gradient(135deg, #000000, #1a0000, #400000);
+      min-height: 100vh;
     }
 
-    /* ====== ENCABEZADO ====== */
-    header {
-      background: linear-gradient(90deg, #0078d7, #00b4d8);
-      color: white;
-      text-align: center;
-      padding: 70px 20px 50px 20px;
-    }
-
-    header h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.2em;
-      opacity: 0.9;
-    }
-
-    /* ====== MENÚ ====== */
-    nav {
-      position: sticky;
-      top: 0;
-      background: #005ea6;
+    /* ====== PORTADA ====== */
+    .portada {
+      height: 100vh;
       display: flex;
+      flex-direction: column;
       justify-content: center;
-      gap: 30px;
-      padding: 15px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      z-index: 10;
+      align-items: center;
+      text-align: center;
+      background: radial-gradient(circle at center, #400000 0%, #000000 90%);
+      color: #fff;
     }
 
-    nav a {
-      color: white;
+    .portada h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      background: linear-gradient(90deg, #ff0000, #ff4d4d, #ffffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 3s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff0000; }
+      to { text-shadow: 0 0 20px #ff4d4d; }
+    }
+
+    .portada p {
+      font-size: 1.2em;
+      margin-bottom: 40px;
+      color: #bbb;
+    }
+
+    .menu-opciones {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .menu-opciones a {
       text-decoration: none;
-      font-weight: 600;
+      color: white;
+      font-size: 1.3em;
+      font-weight: bold;
+      background: linear-gradient(90deg, #ff0000, #8b0000);
+      padding: 15px 40px;
+      border-radius: 30px;
       transition: all 0.3s ease;
-      padding: 8px 16px;
-      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
     }
 
-    nav a:hover {
-      background: white;
-      color: #005ea6;
+    .menu-opciones a:hover {
+      background: linear-gradient(90deg, #8b0000, #ff0000);
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(255, 50, 50, 0.7);
     }
 
     /* ====== SECCIONES ====== */
     section {
       max-width: 900px;
-      margin: 60px auto;
-      background: white;
+      margin: 80px auto;
+      background: rgba(20, 20, 20, 0.9);
       border-radius: 20px;
       padding: 40px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.2);
       transition: transform 0.3s ease;
     }
 
@@ -81,14 +92,16 @@
     }
 
     section h2 {
-      color: #0078d7;
-      margin-bottom: 20px;
+      color: #ff4d4d;
       text-align: center;
+      margin-bottom: 20px;
+      font-size: 2em;
     }
 
     section p {
       font-size: 1.1em;
       line-height: 1.6;
+      color: #ddd;
       text-align: justify;
     }
 
@@ -101,45 +114,41 @@
     }
 
     section img:hover {
-      transform: scale(1.03);
+      transform: scale(1.05);
     }
 
-    /* ====== PIE DE PÁGINA ====== */
     footer {
-      background-color: #333;
-      color: white;
+      background-color: #111;
+      color: #888;
       text-align: center;
-      padding: 20px 10px;
-      margin-top: 60px;
-    }
-
-    footer p {
+      padding: 15px 0;
+      margin-top: 80px;
       font-size: 0.9em;
+      border-top: 1px solid #333;
     }
   </style>
 </head>
 <body>
 
-  <!-- ====== ENCABEZADO ====== -->
-  <header>
+  <!-- ====== PANTALLA INICIAL ====== -->
+  <div class="portada" id="inicio">
     <h1>Tecnologías de Fabricación Digital</h1>
     <p>Por Marco Antonio</p>
-  </header>
 
-  <!-- ====== MENÚ ====== -->
-  <nav>
-    <a href="#impresion3d">🧱 Impresión 3D</a>
-    <a href="#corteLaser">🔦 Corte Láser</a>
-    <a href="#pcb">💡 Circuito PCB</a>
-  </nav>
+    <div class="menu-opciones">
+      <a href="#impresion3d">🧱 Impresión 3D</a>
+      <a href="#corteLaser">🔦 Corte Láser</a>
+      <a href="#pcb">💡 Circuito PCB</a>
+    </div>
+  </div>
 
   <!-- ====== SECCIONES ====== -->
   <section id="impresion3d">
     <h2>🧱 Impresión 3D</h2>
     <p>
-      La impresión 3D es una tecnología revolucionaria que permite crear objetos tridimensionales
-      a partir de modelos digitales. Se basa en el principio de fabricación aditiva,
-      donde el material (como plástico o resina) se deposita capa por capa hasta formar la pieza final.
+      La impresión 3D permite fabricar objetos tridimensionales a partir de un diseño digital,
+      depositando material capa por capa hasta crear una pieza sólida. Se utiliza ampliamente
+      en la creación de prototipos, piezas personalizadas y componentes industriales.
     </p>
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/3D_printer_with_spools.jpg" alt="Impresora 3D">
   </section>
@@ -147,9 +156,9 @@
   <section id="corteLaser">
     <h2>🔦 Corte Láser</h2>
     <p>
-      El corte láser es una técnica de fabricación que utiliza un haz de luz concentrado
-      para cortar o grabar materiales como madera, acrílico, cuero o metal.
-      Es muy utilizado en diseño industrial, arquitectura y creación de prototipos por su precisión y velocidad.
+      El corte láser es una técnica de fabricación que utiliza un rayo láser de alta potencia
+      para cortar o grabar materiales con gran precisión. Es ideal para trabajos con madera,
+      acrílico, tela y metales finos.
     </p>
     <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Laser_cutting_machine.jpg" alt="Máquina de corte láser">
   </section>
@@ -157,14 +166,13 @@
   <section id="pcb">
     <h2>💡 Circuito PCB</h2>
     <p>
-      Un PCB (Printed Circuit Board) es una placa que permite conectar electrónicamente
-      los componentes de un circuito mediante pistas de cobre. Gracias a su eficiencia,
-      los PCBs son esenciales en dispositivos electrónicos como computadoras, celulares y robots.
+      Un circuito impreso o PCB (Printed Circuit Board) es una placa que conecta electrónicamente
+      los componentes mediante pistas de cobre. Constituye la base de la mayoría de los dispositivos
+      electrónicos modernos.
     </p>
     <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Printed_circuit_board.jpg" alt="Placa de circuito impreso">
   </section>
 
-  <!-- ====== PIE DE PÁGINA ====== -->
   <footer>
     <p>© 2025 Marco Antonio - Proyecto de Tecnologías de Fabricación Digital</p>
   </footer>
