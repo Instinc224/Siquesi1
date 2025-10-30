@@ -5,123 +5,158 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tecnologías de Fabricación Digital</title>
   <style>
-    /* Estilos generales */
-    body {
+    * {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #f5f5f5;
-      background: linear-gradient(135deg, #0a0a0a, #1a0000);
+      padding: 0;
+      box-sizing: border-box;
       scroll-behavior: smooth;
     }
 
-    header {
-      text-align: center;
-      padding: 80px 20px;
-      background: linear-gradient(135deg, #8b0000, #1a0000);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #000000, #1a0000, #330000);
+      color: #f5f5f5;
     }
 
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      color: #ccc;
-    }
-
-    /* Menú */
-    .menu {
+    /* ====== PORTADA ====== */
+    .portada {
+      height: 100vh;
       display: flex;
+      flex-direction: column;
       justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: radial-gradient(circle at center, #440000 0%, #000000 100%);
+      color: #fff;
+    }
+
+    .portada h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      background: linear-gradient(90deg, #ff0000, #ff4d4d, #ffffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 3s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff0000; }
+      to { text-shadow: 0 0 20px #ff4d4d; }
+    }
+
+    .portada p {
+      font-size: 1.2em;
+      margin-bottom: 40px;
+      color: #bbb;
+    }
+
+    .menu-opciones {
+      display: flex;
+      flex-direction: column;
       gap: 20px;
-      margin-top: 40px;
     }
 
-    .menu a {
+    .menu-opciones a {
       text-decoration: none;
-      background: linear-gradient(45deg, #ff1e1e, #a00000);
       color: white;
-      padding: 15px 25px;
-      border-radius: 30px;
-      transition: 0.3s;
+      font-size: 1.3em;
       font-weight: bold;
+      background: linear-gradient(90deg, #ff0000, #8b0000);
+      padding: 15px 40px;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
     }
 
-    .menu a:hover {
-      background: linear-gradient(45deg, #ff4d4d, #c00000);
-      transform: scale(1.05);
-      box-shadow: 0 0 10px #ff1e1e;
+    .menu-opciones a:hover {
+      background: linear-gradient(90deg, #8b0000, #ff0000);
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(255, 50, 50, 0.7);
     }
 
-    /* Secciones */
+    /* ====== SECCIONES ====== */
     section {
       max-width: 900px;
       margin: 80px auto;
-      padding: 40px;
-      background: rgba(20, 0, 0, 0.8);
+      background: rgba(20, 0, 0, 0.9);
       border-radius: 20px;
-      box-shadow: 0 0 15px rgba(255,0,0,0.3);
+      padding: 40px;
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.2);
     }
 
     section h2 {
-      font-size: 2rem;
       color: #ff4d4d;
-      margin-bottom: 15px;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2em;
     }
 
     section h3 {
       margin-top: 25px;
-      color: #ffb3b3;
+      color: #ff9999;
     }
 
     ul {
-      text-align: left;
-      list-style-type: "⚙️ ";
       margin-left: 40px;
+      margin-top: 10px;
     }
 
-    /* Botón de regreso */
+    li {
+      margin-bottom: 8px;
+    }
+
+    p {
+      text-align: justify;
+      line-height: 1.6;
+    }
+
+    /* ====== BOTÓN VOLVER ====== */
     .volver {
-      display: inline-block;
-      margin-top: 40px;
-      background: linear-gradient(45deg, #ff1e1e, #a00000);
-      color: white;
-      padding: 10px 25px;
-      border-radius: 20px;
+      display: block;
+      width: fit-content;
+      margin: 40px auto 0;
       text-decoration: none;
-      transition: 0.3s;
+      color: white;
+      background: linear-gradient(90deg, #ff0000, #8b0000);
+      padding: 12px 30px;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
     }
 
     .volver:hover {
-      background: linear-gradient(45deg, #ff4d4d, #c00000);
-      transform: scale(1.05);
-      box-shadow: 0 0 10px #ff1e1e;
+      background: linear-gradient(90deg, #8b0000, #ff0000);
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(255, 50, 50, 0.7);
     }
 
+    /* ====== PIE DE PÁGINA ====== */
     footer {
+      background-color: #111;
+      color: #888;
       text-align: center;
-      padding: 20px;
-      background: #111;
-      color: #aaa;
-      font-size: 0.9rem;
+      padding: 20px 0;
+      font-size: 0.9em;
+      border-top: 1px solid #333;
     }
   </style>
 </head>
 <body>
-  <header id="inicio">
+
+  <!-- ====== PANTALLA INICIAL ====== -->
+  <div class="portada" id="inicio">
     <h1>Tecnologías de Fabricación Digital</h1>
     <p>Por Marco Antonio</p>
 
-    <div class="menu">
+    <div class="menu-opciones">
       <a href="#impresion3d">🧱 Impresión 3D</a>
       <a href="#cortelaser">🔦 Corte Láser</a>
       <a href="#pcb">💡 Circuito PCB</a>
     </div>
-  </header>
+  </div>
 
-  <!-- Impresión 3D -->
+  <!-- ====== IMPRESIÓN 3D ====== -->
   <section id="impresion3d">
     <h2>🧱 Impresión 3D</h2>
     <p>La impresión 3D es una tecnología de fabricación aditiva, lo que significa que crea objetos capa por capa a partir de un modelo digital.
@@ -148,14 +183,16 @@
       <li>PETG, resinas y filamentos flexibles.</li>
     </ul>
 
-    <a href="#inicio" class="volver">⬆️ Regresar al inicio</a>
+    <h3>Trabajo realizado:</h3>
+    <p>Realicé un trabajo sobre una impresión 3D, se realizó en Tinkercad y la idea era crear un cubo con una bolita por dentro, para que al imprimirlo y después quitar los soportes se pueda mover libremente dicha bolita. Es importante recalcar que el archivo que se descargó para la impresión es <b>.stl</b>, compatible con las impresoras 3D.</p>
+
+    <a class="volver" href="#inicio">⬆️ Regresar al inicio</a>
   </section>
 
-  <!-- Corte Láser -->
+  <!-- ====== CORTE LÁSER ====== -->
   <section id="cortelaser">
     <h2>🔦 Corte Láser</h2>
-    <p>El corte láser utiliza un rayo láser concentrado para cortar o grabar materiales con gran precisión.
-    Se controla mediante un archivo digital (vector o CAD) que guía el movimiento del láser sobre el material.</p>
+    <p>El corte láser utiliza un rayo láser concentrado para cortar o grabar materiales con gran precisión. Se controla mediante un archivo digital (vector o CAD) que guía el movimiento del láser sobre el material.</p>
 
     <h3>Aplicaciones:</h3>
     <ul>
@@ -176,14 +213,17 @@
       <li>MDF, acrílico, papel, cuero, metal delgado y cartón.</li>
     </ul>
 
-    <a href="#inicio" class="volver">⬆️ Regresar al inicio</a>
+    <h3>Trabajo realizado:</h3>
+    <p>Se diseñaron en Tinkercad las piezas necesarias para crear un cubo armable con 6 caras, modeladas con medidas exactas para lograr un buen encaje. Luego se exportó el archivo en formato <b>.dxf</b>, compatible con la cortadora láser. Es importante usar madera del mismo grosor que el diseño para cortar correctamente.  
+    Una vez cortadas las piezas, se ensamblaron y se verificó que encajaran perfectamente.</p>
+
+    <a class="volver" href="#inicio">⬆️ Regresar al inicio</a>
   </section>
 
-  <!-- Circuito PCB -->
+  <!-- ====== CIRCUITO PCB ====== -->
   <section id="pcb">
     <h2>💡 Circuito PCB (Placa de Circuito Impreso)</h2>
-    <p>Un PCB (Printed Circuit Board) es una placa que sirve de base para montar y conectar los componentes electrónicos de un circuito.
-    En lugar de usar cables, las pistas de cobre conducen la electricidad entre los componentes.</p>
+    <p>Un PCB (Printed Circuit Board) es una placa que sirve de base para montar y conectar los componentes electrónicos de un circuito. En lugar de usar cables, las pistas de cobre conducen la electricidad entre los componentes.</p>
 
     <h3>Aplicaciones:</h3>
     <ul>
@@ -206,11 +246,17 @@
       <li>Pruebas y ensamblado final.</li>
     </ul>
 
-    <a href="#inicio" class="volver">⬆️ Regresar al inicio</a>
+    <h3>Trabajo realizado:</h3>
+    <p>Para el circuito PCB se utilizó EasyEDA, un diseñador web que permitió crear el diagrama del circuito con componentes como N555, resistencias, potenciómetros, bornera, capacitor, LED y transistor.  
+    Después se diseñaron las pistas definiendo su grosor en 0.5 mm.  
+    Finalmente, se exportó el diseño en un archivo <b>Gerber</b> para imprimirlo en una placa de cobre y soldar los componentes.</p>
+
+    <a class="volver" href="#inicio">⬆️ Regresar al inicio</a>
   </section>
 
   <footer>
-    © 2025 Marco Antonio — Tecnologías de Fabricación Digital
+    <p>© 2025 Marco Antonio - Tecnologías de Fabricación Digital</p>
   </footer>
+
 </body>
 </html>
